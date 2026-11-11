@@ -1,69 +1,56 @@
-import Image from "next/image";
+import React from 'react';
+import Link from 'next/link';
 
 export default function Home() {
   return (
-    <div className="flex flex-col flex-1 items-center justify-center bg-zinc-50 font-sans dark:bg-black">
-      <main className="flex flex-1 w-full max-w-3xl flex-col items-center justify-between py-32 px-16 bg-white dark:bg-black sm:items-start">
-        <Image
-          className="dark:invert h-5 w-[100px]"
-          src="/next.svg"
-          alt="Next.js logo"
-          width={100}
-          height={20}
-          priority
-        />
-        <div className="flex flex-col items-center gap-6 text-center sm:items-start sm:text-left">
-          <h1 className="max-w-xs text-3xl font-semibold leading-10 tracking-tight text-black dark:text-zinc-50">
-            To get started, edit the{" "}
-            <code className="rounded bg-black/[.06] px-1.5 py-0.5 font-mono text-[0.9em] dark:bg-white/[.08]">
-              page.tsx
-            </code>{" "}
-            file.
+    <div dir="rtl" className="w-full bg-white flex flex-col">
+      
+      <section className="w-full min-h-[calc(100vh-80px)] grid grid-cols-1 md:grid-cols-2 items-center bg-white shadow-lg overflow-hidden border border-[#FCE4EC]">
+        
+        
+        <div className="p-8 md:p-12 lg:p-16 flex flex-col items-start justify-center text-right">
+          <span className="text-sm font-bold text-[#D84370] bg-[#FCE4EC] px-4 py-1.5 rounded-full mb-6">
+            متجر الهدايا اليدوية 
+          </span>
+          
+          <h1 className="text-3xl md:text-5xl font-extrabold text-gray-700 mb-6 leading-tight">
+            اصنعي لحظاتك المميزة بكل حب
           </h1>
-          <p className="max-w-md text-lg leading-8 text-zinc-600 dark:text-zinc-400">
-            Looking for a starting point or more instructions? Head over to{" "}
-            <a
-              href="https://vercel.com/templates?framework=next.js&utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-              className="font-medium text-zinc-950 dark:text-zinc-50"
-            >
-              Templates
-            </a>{" "}
-            or the{" "}
-            <a
-              href="https://nextjs.org/learn?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-              className="font-medium text-zinc-950 dark:text-zinc-50"
-            >
-              Learning
-            </a>{" "}
-            center.
+          
+          <p className="text-gray-600 text-lg md:text-xl mb-8 leading-relaxed max-w-lg">
+            أجمل الهدايا اليدوية المصممة خصيصاً لتناسب ذوقك وتعبر عن مشاعرك في كل المناسبات.
           </p>
+          
+          <div className="flex flex-wrap gap-4 w-full sm:w-auto">
+            <Link
+              href="/products"
+              style={{
+                background: 'linear-gradient(135deg, #D84370 0%, #E77295 100%)',
+              }}
+              className="flex-1 sm:flex-initial text-center text-white py-3.5 px-8 rounded-[8px] text-[16px] font-bold shadow-md hover:opacity-95 transition-all"
+            >
+              تصفح المنتجات 
+            </Link>
+            <Link
+              href="/about"
+              className="flex-1 sm:flex-initial text-center bg-white text-[#D84370] border-2 border-[#D84370] py-3.5 px-8 rounded-[8px] text-[16px] font-bold shadow-sm hover:bg-[#FCE4EC]/30 transition-all"
+            >
+              عن المتجر
+            </Link>
+          </div>
         </div>
-        <div className="flex flex-col gap-4 text-base font-medium sm:flex-row">
-          <a
-            className="flex h-12 w-full items-center justify-center gap-2 rounded-full bg-foreground px-5 text-background transition-colors hover:bg-[#383838] dark:hover:bg-[#ccc] md:w-[158px]"
-            href="https://vercel.com/new?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            <Image
-              className="dark:invert h-[14px] w-4"
-              src="/vercel.svg"
-              alt="Vercel logomark"
-              width={16}
-              height={14}
-            />
-            Deploy Now
-          </a>
-          <a
-            className="flex h-12 w-full items-center justify-center rounded-full border border-solid border-black/[.08] px-5 transition-colors hover:border-transparent hover:bg-black/[.04] dark:border-white/[.145] dark:hover:bg-[#1a1a1a] md:w-[158px]"
-            href="https://nextjs.org/docs?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Documentation
-          </a>
+
+      
+        <div className="w-full h-[350px] md:h-full min-h-[450px] relative overflow-hidden bg-white">
+          <img 
+            src="/images/products/logo1.png" 
+            alt="Made with Passion" 
+            className="w-full h-full object-cover"
+          />
         </div>
-      </main>
+
+      </section>
+
     </div>
   );
 }
