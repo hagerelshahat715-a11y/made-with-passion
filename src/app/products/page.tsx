@@ -6,7 +6,7 @@ import { useCart } from "@/app/context/CartContext";
 
 export default function ProductsPage() {
   const [selectedCategory, setSelectedCategory] = useState("all");
- const { cart, addToCart, removeFromCart, totalPrice, isCartOpen, setIsCartOpen } = useCart();
+  const { cart, addToCart, removeFromCart, totalPrice, isCartOpen, setIsCartOpen } = useCart();
   const [activeImages, setActiveImages] = useState<{ [key: string]: number }>({});
   const [expandedDescriptions, setExpandedDescriptions] = useState<{ [key: string]: boolean }>({});
 
