@@ -7,10 +7,19 @@ export default function Home() {
       
       <section className="w-full min-h-[calc(100vh-80px)] grid grid-cols-1 md:grid-cols-2 items-center bg-white shadow-lg overflow-hidden border border-[#FCE4EC]">
         
-        
-        <div className="p-8 md:p-12 lg:p-16 flex flex-col items-start justify-center text-right">
+        {/* الصورة - ستظهر أولاً في الموبايل (order-1) وتعود للجانب الأيمن/اليسار في الكمبيوتر (md:order-2) */}
+        <div className="w-full h-[350px] md:h-full min-h-[450px] relative overflow-hidden bg-white order-1 md:order-2">
+          <img 
+            src="/images/products/logo1.png" 
+            alt="Made with Passion" 
+            className="w-full h-full object-cover"
+          />
+        </div>
+
+        {/* النصوص والأزرار - ستظهر بعد الصورة في الموبايل (order-2) وفي مكانها الطبيعي في الكمبيوتر (md:order-1) */}
+        <div className="p-8 md:p-12 lg:p-16 flex flex-col items-start justify-center text-right order-2 md:order-1">
           <span className="text-sm font-bold text-[#D84370] bg-[#FCE4EC] px-4 py-1.5 rounded-full mb-6">
-            متجر الهدايا اليدوية 
+            متجر الهدايا اليدوية 🌸
           </span>
           
           <h1 className="text-3xl md:text-5xl font-extrabold text-gray-700 mb-6 leading-tight">
@@ -38,15 +47,6 @@ export default function Home() {
               عن المتجر
             </Link>
           </div>
-        </div>
-
-      
-        <div className="w-full h-[350px] md:h-full min-h-[450px] relative overflow-hidden bg-white">
-          <img 
-            src="/images/products/logo1.png" 
-            alt="Made with Passion" 
-            className="w-full h-full object-cover"
-          />
         </div>
 
       </section>
