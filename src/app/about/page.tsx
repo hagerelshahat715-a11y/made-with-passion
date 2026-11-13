@@ -5,7 +5,7 @@ import Link from "next/link";
 import { Sparkles, MessageCircle, Gift } from "lucide-react";
 
 export default function AboutPage() {
-  const whatsappNumber = "201157435798"; 
+  const whatsappNumber = "201557423064"; 
   const customDesignMessage = encodeURIComponent("مرحباً، أود إرسال ديزاين خاص لتنفيذه في متجر Made With Passion 🌸");
   const whatsappUrl = `https://wa.me/${whatsappNumber}?text=${customDesignMessage}`;
 

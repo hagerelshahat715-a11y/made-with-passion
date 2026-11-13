@@ -37,7 +37,7 @@ export function CartProvider({ children }: { children: React.ReactNode }) {
       }
       return [...prevCart, { ...product, quantity: 1 }];
     });
-    setIsCartOpen(true); // تفتح السلة تلقائياً عند إضافة منتج
+    setIsCartOpen(true);
   };
 
   const removeFromCart = (id: string | number) => {
@@ -54,7 +54,7 @@ export function CartProvider({ children }: { children: React.ReactNode }) {
     });
     message += `\nالإجمالي الكلي: ${totalPrice} ج.م`;
 
-    const phone = "201157435798"; 
+    const phone = "201557423064"; 
     const url = `https://wa.me/${phone}?text=${encodeURIComponent(message)}`;
     window.open(url, "_blank");
   };
